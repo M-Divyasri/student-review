@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Review Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Student Review Submission</h1>
+    <p>We value your feedback to improve our programs</p>
+  </header>
+
+  <section class="review">
+    <h2>Submit Your Review</h2>
+    <form action="http://localhost:8080/review" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="course">Course/Internship</label>
+      <input type="text" id="course" name="course" placeholder="Course or Internship name" required>
+
+      <label for="rating">Rating (1-5)</label>
+      <select id="rating" name="rating" required>
+        <option value="">Select Rating</option>
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Fair</option>
+        <option value="3">3 - Good</option>
+        <option value="4">4 - Very Good</option>
+        <option value="5">5 - Excellent</option>
+      </select>
+
+      <label for="message">Your Review</label>
+      <textarea id="message" name="message" placeholder="Write your review here..." required></textarea>
+
+      <div class="acknowledge">
+        <input type="checkbox" id="ack" name="ack" required>
+        <label for="ack">I acknowledge that my review is honest and may be used for feedback purposes.</label>
+      </div>
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </section>
+</body>
+</html>
